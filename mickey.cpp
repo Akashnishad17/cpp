@@ -1,0 +1,59 @@
+#include<graphics.h>
+#include<stdio.h>
+main()
+{
+    int gd=0,gm;
+    initgraph(&gd,&gm,"");
+    initwindow(640,640);
+    int i;
+    char ch;
+    for(i=0;i<=640;i++)
+    {
+        setcolor(WHITE);
+        line(i,0,i,640);
+    }
+    for(i=0;i<=80;i++)
+    {
+        setcolor(BLACK);
+        circle(150,100,i);
+        circle(490,100,i);
+    }
+    for(i=0;i<=220;i++)
+    {
+        setcolor(BLACK);
+        circle(320,340,i);
+    }
+    for(i=0;i<=120;i++)
+    {
+        setcolor(WHITE);
+        ellipse(260,280,0,360,100,i);
+        ellipse(380,280,0,360,100,i);
+    }
+    for(i=0;i<=180;i++)
+    ellipse(320,400,0,360,i,120);
+    setcolor(BLACK);
+    ellipse(320,400,30,150,145,100);
+        ellipse(380,300,-15,180,50,120);
+        ellipse(260,300,0,195,50,120);
+    for(i=0;i<=35;i++)
+    {
+       ellipse(380,300,0,360,i,65);
+        ellipse(260,300,0,360,i,65);
+    }
+    for(i=0;i<=99;i++)
+    {
+        setcolor(WHITE);
+        ellipse(320,400,0,360,144,i);
+    }
+for(i=0;i<=40;i++)
+    {
+        setcolor(BLACK);
+        ellipse(320,350,0,360,65,i);
+    }
+    ellipse(320,400,5,35,160,60);
+    ellipse(320,400,145,175,160,60);
+    ellipse(320,350,200,340,160,80);
+    ellipse(320,350,205,335,120,140);
+    getch();
+    closegraph();
+}

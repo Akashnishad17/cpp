@@ -1,0 +1,35 @@
+#include<graphics.h>
+main()
+{
+    int gd=0,gm;
+    initgraph(&gd,&gm,"");
+    int i,j;
+    for(i=0;i<=600;i++)
+    {
+        setcolor(4);
+        line(0+i,0,0+i,100);
+        setcolor(15);
+        line(0+i,100,0+i,200);
+        setcolor(2);
+        line(0+i,200,0+i,300);
+    }
+    setcolor(0);
+    circle(300,150,50);
+    line(250,150,350,150);
+    line(300,100,300,200);
+    for(j=1;j<=2;j++)
+    {
+    for(i=1;i<=3;i++)
+    {
+        if(j%2==0)
+            i=-i;
+    line(300+i*10,100+i*2,300-i*10,200-i*2);
+    line(250+i*2,150+i*10,350-i*2,150-i*10);
+    if(j%2==0)
+        i=-i;
+    //line(320,104,280,196);
+    }
+    }
+    getch();
+    closegraph();
+}
